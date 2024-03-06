@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --black-1: #202020;
+  --black-2: #323232;
+  --tosca-accent: #00c6ba;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  /* width: 100vw; */
+  background-color: var(--black-1);
+}
+
+/* Typography */
+
+h1,
+.text-13,
+.text-16,
+.text-24,
+.text-32 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.text-13 {
+  font-size: 13px;
+}
+
+.text-16 {
+  font-size: 16px;
+}
+
+.text-24 {
+  font-size: 24px;
+}
+
+.text-32 {
+  font-size: 32px;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 56px;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 46px;
+  margin-bottom: 0;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.t-primary {
+  color: var(--tosca-accent);
+}
+
+.t-white {
+  color: #ffffff;;
+}
+
+.t-black-1 {
+  color: var(--black-1);
+}
+
+.t-black-2 {
+  color: var(--black-2);
+}
+
+.t-warning {
+  color: rgb(255, 217, 0);
+}
+
+/* spacing */
+.mt-1 {
+  margin-top: 4px;
+}
+
+/* Content */
+.container {
+  max-width: 1368px;
+  margin: auto;
+}
+
+.header {
+  margin: 0;  
+}
+
+.nav-container {
+  max-width: 768px;
+  margin: 0 auto;
+  border-bottom-left-radius: 3em;
+  border-bottom-right-radius: 3em;
+  background-color: var(--black-2);
+}
+
+.nav-menu {
+  list-style: none;  
+  height: 5em;
+  margin: 0;
+  padding: 0.5em 2em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+
+.img-tr {
+  background-image: linear-gradient(142deg, rgba(32,32,32,1) 0%, rgba(0,0,0,0.9108237044817927) 22%, rgba(0,198,186,0.7931766456582633) 100%);
+  background-image: url('./assets/img/s1.webp');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 200px;
+  top: -180px;
+  right: -60px;
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3em;
+}
+
+.intro-l,
+.intro-r {
+  width: 100%;
+  height: 100%;
+}
+
+.intro-l {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  filter: drop-shadow(-40px 26px 1px rgba(12, 178, 178, 1));
+}
+
+.clipped-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/img/s2.webp') center/cover no-repeat;
+  clip-path: polygon(
+    210px 465px, -50px 200px, -50px 300px, 140px 40px,
+    180px 0px, 220px 0px, 220px 0px, 480px 0px,
+    510px 0px, 530px 30px, 530px 30px, 585px 120px,
+    585px 120px, 600px 140px, 600px 160px, 600px 465px,
+    600px 500px, 565px 500px, 565px 500px, 285px 500px,
+    265px 500px, 265px 500px, 240px 485px
+  );
+}
+
+.img-abs {
+  position: fixed;
+  z-index: 100;
+}
+
+
+@media (min-width: 1200px) {
+  .intro-l,
+  .intro-r {
+    width: 50%;
+  }
+}
+
+@keyframes openYourHeart {
+  from {
+    r: 0;
+  }
+  to {
+    r: 60px;
+  }
+}
+
+#myClip circle {
+  animation: openYourHeart 15s infinite;
+}
