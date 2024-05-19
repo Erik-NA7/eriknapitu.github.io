@@ -1,97 +1,379 @@
+<!-- Nama: Parna Erikson Saragi -->
+<!-- NIM: 230401020063 -->
+<!-- Kelas: IT204 -->
+<!-- Nama Mata Kuliah: Pemrograman Web I -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./assets/js/links.js"></script>
-  <title>Document</title>
-</head>
-<body>
-  <div class="img-abs img-tr"></div>
-  <nav class="header">
-    <div class="nav-container">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="#about" class="text-16 regular t-white links">About me</a>
-        </li>
-        <li class="nav-item">
-          <a href="#portfolio" class="text-16 regular t-white links">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a href="#technology" class="text-16 regular t-white links">Technology</a>
-        </li>
-        <li class="nav-item">
-          <a href="#contact" class="text-16 regular t-white links">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <section id="about">
-    <div class="container">
-      <div class="intro">
-        <div class="intro-l">
-          <object type="image/svg+xml" data="./assets/img/s2.svg"></object>
-        </div>
-        <div class="intro-r">
-          <h1 class="bold t-white">Hi, I'm<br/>P. Erikson Saragi</h1>
-          <h1 class="bold t-primary">Fullstack Developer</h1>
-          <article class="text-32 t-white mt-2">
-            <p>I build website, web app, REST API, and now slowly diving into mobile app with Flutter.</p> 
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-  <hr/>
-  <section id="portfolio">
-    <div class="container">
-      <h1 class="t-primary t-center">What I have built</h1>
-      <div class="d-flex col py-3">
-        <h2 class="t-white t-center">Website &#38; Web app</h2>
-        <div class="d-flex col py-4">
-          <div class="d-flex row">
-            <div class="p-1">
-              <a href="https://ruangengineer.id" target="_blank">
-                <img src="./assets/img/re_light.svg" width="300" height="auto">
-              </a>
-            </div>
-            <div class="p-1">
-              <a href="https://bentanihotel.id" target="_blank">
-                <img src="./assets/img/bentani_light.svg" width="200" height="auto">
-              </a>
-            </div>
-            <a href="https://entrepreneurshipmahasiswa.id" target="_blank">
-              <div class="p-1">
-                <img src="./assets/img/emc.svg" width="300" height="auto">
-              </div>
-            </a>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="assets/js/links.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <a class="scroll-top" href="#about" title="Scroll to top">
+      <img src="assets/img/arrow_up_icon.svg" width="24" height="24" style="color: white;" alt="go to top"/>
+    </a>
+    <!-- Navigation menu (internal anchors) -->
+    <nav>
+      <button id="nav-toggle">
+        <img src="assets/img/arrow_up_icon.svg" width="24" alt="Toggle menu" height="24" style="color: white;"/>
+      </button>
+      <!-- <div> -->
+        <ul id="nav-menu">
+          <li>
+            <a href="#about" class="nav-link">About me</a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li>
+            <a href="#experiences" class="nav-link">Experience</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li>
+            <a href="#education" class="nav-link">Education</a>
+          </li>
+          <li>
+            <a href="#courses" class="nav-link">Course</a>
+          </li>
+          <li>
+            <a href="#languages" class="nav-link">Languages</a>
+          </li>
+        </ul>
+      <!-- </div> -->
+    </nav>
+    <!-- Navigation menu (internal anchors) end-->
+    
+    <!-- About section -->
+    <section id="about">
+      <div class="container">
+        <div class="intro">
+          <div class="intro-l" style="overflow-x: auto;">
+            <!-- biodata -->
+            <h1 class="m-0"><b>Parna Erikson Saragi</b></h1>
+            <p class="text-24 mt-0"><i><b>Full-stack Developer</b></i></p>
+            <table>
+              <!-- <thead> -->
+                <th title="key" style="min-width: 80px; max-width: 80px;"></th>
+                <th title="colon" style="width: 10px;"></th>
+                <th title="value" style="max-width: 100px;"></th>
+              <!-- </thead> -->
+              <tbody>
+                <tr>
+                  <td>Email</td>
+                  <td>&colon;</td>
+                  <td><a href="mailto:p.erikson.saragi@gmail.com">p.erikson.saragi@gmail.com</a>  
+                  </td>
+                </tr>
+                <tr>
+                  <td>Phone</td>
+                  <td>&colon;</td>
+                  <td><a href="http://wa.me/6285272406402?text=Hi%20Erik%2C" target="_blank">+62 852 72406402</a></td>
+                </tr>
+                <tr rowspan="2" style="vertical-align: top;">
+                  <td>Address</td>
+                  <td>&colon;</td>
+                  <td>Gg. Olahraga 62, Ciriung, Kec. Cibinong,<br>Bogor Regency, West Java, Indonesia
+                  </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                  <td>LinkedIn</td>
+                  <td>&colon;</td>
+                  <td style="font-weight: 500;"><a href="https://linkedin.com/in/p-erikson-saragi" target="_blank"><u>https://linkedin.com/in/p-erikson-saragi</u></a></td>
+                </tr>
+                <tr>
+                  <td>GitHub</td>
+                  <td>&colon;</td>
+                  <td style="font-weight: 500;"><a class="" href="https://github.com/Erik-NA7" target="_blank">Erik-NA7</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="intro-r" title="My photo">
+            <img src="assets/img/photo.jpeg" alt="self-portrait"/>
           </div>
         </div>
-        <div class="d-flex col py-3">
-          <h2 class="t-white t-center">REST API</h2>
-          <div class="d-flex row py-4">
-            <div class="p-1">
-              <a href="https://apidev.taradmc.com/swagger" target="_blank">
-                <img src="./assets/img/taradmc.png" width="300" height="auto">
-              </a>
-            </div>
+        <br/>
+        <p>I wrote my first line of code - a <b>Turbo PASCAL</b> code - back in 2004 during my study in Instrumentation Technology. 16 years later - late 2019, I learned everything from scratch once again then I focus on learning web development during the 2020 Pandemic.</p>
+        <p class="m-0">I got my first job as a developer in 2022 - fulfilling my dream as a software engineer - crafting digital solutions with a passion for innovation and a dedication to staying at the forefront of technology trends and best practices. I have been involved in all stages of the development cycle for dynamic web application projects.</p>
+      </div>
+    </section>
+    <!-- About section end-->
+    <br/>
+    <!-- Skills section -->
+    <section id="skills">
+      <div class="container">
+        <!-- skills -->
+        <h2 class="mb-2 d-flex">
+          <img src="assets/img/code.svg" width="26" alt="skills" style="vertical-align: baseline; color: var(--tosca-accent)"/>Skills
+        </h2>
+        <hr/>
+        <div class="d-flex f-wrap">
+          <div class="f-col f-50">
+            <ul class="m-0">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Responsive web design</li>
+              <li>Python</li>
+              <li>PHP</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <div class="f-col f-50">
+            <ul class="m-0">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>RESTful API</li>
+              <li>Git</li>
+              <li>Docker</li>
+              <li>CI/CD</li>
+              <li>Scrum</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <hr/>
-  <section id="technology">
-    <div class="container">
-      <h1 class="t-primary t-center">Technologies I use</h1>
-    </div>
-  </section>
-  <hr/>
-  <section id="contact">
-    <div class="container">
-      <h1 class="t-primary t-center">Contact</h1>
-    </div>
-  </section>
-</body>
+    </section>
+    <!-- Skills section end-->
+
+    <!-- Experience section -->
+    <section id="experiences">
+      <div class="container">
+        <!-- experiences -->
+        <h2 class="mb-2">
+          <img src="assets/img/briefcase.svg" width="26" alt="briefcase" style="vertical-align: baseline; color: var(--tosca-accent)"/>Experience
+        </h2>
+        <hr/>
+        <ol class="m-0">
+          <li class="mb-2">
+            <p class="mb-2"><b class="text-18">Software Engineer</b></p>
+            <p class="mb-2"><i>Tekno Insan Mandiri,&nbsp;May 2022 - present</i></p>
+            <ul class="child-list">
+              <li>Collaborated with designers to develop clean interfaces and simple, intuitive interactions</li>
+              <li>Collaborated with product manager and system analyst to address client's intricate business requirements</li>
+              <li>Developed and implemented new features for client and internal web applications</li>
+              <li>Configured project-specific server configuration and CI/CD pipeline resulting in a 20% increase in deployment efficiency</li>
+              <li>Implemented modern technologies within the team, resulting in a 20% increase in productivity and performance</li>
+            </ul>
+          </li>
+          <li class="mb-2">
+            <p class="mb-2">
+              <b class="text-18">Project Coordinator</b>
+            </p>
+            <p class="mb-2">
+              <i>Habitat for Humanity Indonesia,&nbsp;Apr 2019 - May 2022</i>
+            </p>
+          </li>
+          <li class="mb-2">
+            <p class="mb-2">
+              <b class="text-18">Volunteer Coordinator</b>
+            </p>
+            <p class="mb-2">
+              <i>Habitat for Humanity Indonesia,&nbsp;Mar 2014 - Mar 2019</i>
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <!-- Experience section end-->
+
+    <!-- Projects section -->
+    <section id="projects">
+      <div class="container" style="overflow-x:auto;">
+        <h2 class="mb-2">
+          <img src="assets/img/project.svg" width="26" alt="project" style="vertical-align: baseline; color: var(--tosca-accent)"/>Projects
+        </h2>
+        <hr/>
+        <table cellpadding="10">
+          <thead>
+            <th style="min-width: 200px;">Title</th>
+            <th style="min-width: 200px;">Role</th>
+            <th>Tech stack</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://ruangengineer.id" target="_blank">Ruang Engineer</a></td>
+              <td>Full-stack Developer</td>
+              <td class="td-img">
+                <img src="assets/img/next-js-hd-logo.png" width="24" alt="NextJS" title="NextJS"/>
+                <img src="assets/img/postgresql.png" width="24" alt="PostgreSQL" title="PostgreSQL"/>
+                <img src="assets/img/docker-3.svg" width="24" alt="Docker" title="Docker"/>
+                <img src="assets/img/firebase.svg" width="24" alt="Firebase Cloud Messaging" title="Firebase Cloud Messaging"/>
+                <img src="assets/img/gitlab.svg" width="24" alt="Gitlab" title="Gitlab"/>
+                <img src="assets/img/pm2.png" width="24" alt="PM2" title="PM2"/>
+                <img src="assets/img/nginx.svg" width="24" alt="Nginx" title="Nginx"/>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://entrepreneurshipmahasiswa.id/" target="_blank">EMC 2023</a></td>
+              <td>Front-end Developer</td>
+              <td class="td-img">
+                <img src="assets/img/eleventy.svg" width="24" alt="Eleventy" title="Eleventy"/>
+                <img src="assets/img/gitlab.svg" width="24" alt="Gitlab" title="Gitlab"/>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://bentanihotel.id/" target="_blank">Bentani Hotel</a></td>
+              <td>Full-stack Developer</td>
+              <td class="td-img">
+                <img src="assets/img/next-js-hd-logo.png" width="24" alt="NextJS" title="NextJS"/>
+                <img src="assets/img/laravel.svg" width="24" alt="Laravel" title="Laravel"/>
+                <img src="assets/img/mysql.png" height="24" alt="MySQL" title="MySQL"/>
+                <img src="assets/img/gitlab.svg" width="24" alt="Gitlab" title="Gitlab"/>
+                <img src="assets/img/pm2.png" width="24" alt="PM2" title="PM2"/>
+                <img src="assets/img/nginx.svg" width="24" alt="Nginx" title="Nginx"/>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://apidev.taradmc.com/swagger" target="_blank">TaraDMC REST API</a></td>
+              <td>REST API Developer</td>
+              <td class="td-img">
+                <img src="assets/img/django.svg" width="24" alt="Django" title="Django"/>
+                <img src="assets/img/drf.png" height="24" alt="Django Rest Framework" title="Django Rest Framework"/>
+                <img src="assets/img/swagger.svg" width="24" alt="Swagger" title="SwaggerUI"/>
+                <img src="assets/img/gitlab.svg" width="24" alt="Gitlab" title="Gitlab"/>
+                <img src="assets/img/nginx.svg" width="24" alt="Nginx" title="Nginx"/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- Projects section end-->
+
+    <!-- Education section -->
+    <section id="education">
+      <div class="container">
+        <h2 class="mb-2">
+          <img src="assets/img/graduation-cap.svg" width="26" alt="graduation cap"  style="vertical-align: baseline; color: var(--tosca-accent)"/>Education
+        </h2>
+        <hr/>
+        <p>
+          <b class="text-18">Bachelor Degree in Informatics,&nbsp;</b>Expected Graduation: Sep 2027<br/><i>Asia Cyber University, Indonesia</i>
+        </p>
+        <p>
+          <b class="text-18">Diploma in Instrumentation Technology,&nbsp;</b>Aug 2002 - Aug 2006<br/><i>Gadjah Mada University, Indonesia</i>
+        </p>
+      </div>
+    </section>
+    <!-- Education section end-->
+
+    <!-- Course section -->
+    <section id="courses">
+      <div class="container" style="overflow-x:auto;">
+        <h2 class="mb-2">
+          <img src="assets/img/course.svg" width="26" alt="course" style="vertical-align: baseline; color: var(--tosca-accent)"/>Course
+        </h2>
+        <hr/>
+        <table cellpadding="10">
+          <thead>
+            <th style="min-width: 340px;">Title</th>
+            <th style="min-width: 200px;">Provider</th>
+            <th style="min-width: 200px;">Date</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.dicoding.com/certificates/MEPJNL204X3V" target="_blank">
+                  Cloud Practitioner Essentials (AWS)
+                </a>
+              </td>
+              <td>
+                <a href="https://freecodecamp.org" target="_blank">
+                  Dicoding
+                </a>
+              </td>
+              <td>Sep 23, 2023</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.dicoding.com/certificates/N9ZO60KJ6XG5" target="_blank">
+                  Belajar Dasar-Dasar DevOps
+                </a>
+              </td>
+              <td>
+                <a href="https://freecodecamp.org" target="_blank">
+                  Dicoding
+                </a>
+              </td>
+              <td>Jul 17, 2023</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.freecodecamp.org/certification/erikna7/back-end-development-and-apis" target="_blank">
+                  Backend Development and APIs
+                </a>
+              </td>
+              <td>
+                <a href="https://freecodecamp.org" target="_blank">
+                  FreeCodeCamp
+                </a>
+              </td>
+              <td>March 26, 2022</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://freecodecamp.org/certification/erikna7/javascript-algorithms-and-data-structures" target="_blank">
+                  JavaScript Algorithms and Data Structures
+                </a>
+              </td>
+              <td>
+                <a href="https://freecodecamp.org" target="_blank">
+                  FreeCodeCamp
+                </a>
+              </td>
+              <td>March 7, 2022</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.freecodecamp.org/certification/erikna7/responsive-web-design" target="_blank">
+                  Responsive Web Design
+                </a>
+              </td>
+              <td>
+                <a href="https://freecodecamp.org" target="_blank">
+                  FreeCodeCamp
+                </a>
+              </td>
+              <td>Februari 25, 2022</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://drive.google.com/file/d/1QIGoYQVvxxJj08FDRcHNKfsnlloOYr-S/view?usp=sharing" target="_blank">
+                  Full-stack Web Development Bootcamp
+                </a>
+              </td>
+              <td>
+                <a href="https://freecodecamp.org" target="_blank">
+                  Binar Academy
+                </a>
+              </td>
+              <td>Sep 29, 2021</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- Course section end -->
+    <!-- Language section -->
+    <section id="languages">
+      <div class="container">
+        <h2 class="mb-2">
+          <img src="assets/img/language.svg" width="26" alt="language" style="vertical-align: baseline; color: var(--tosca-accent)"/>Languages
+        </h2>
+        <hr/>
+        <p>
+          <b class="text-18">Indonesian</b><br/><i>Native</i>
+        </p>
+        <p>
+          <b class="text-18">English</b><br/><i>Professional proficiency </i>
+        </p>
+      </div>
+    </section>
+    <!-- Language section end-->
+  </body>
 </html>
