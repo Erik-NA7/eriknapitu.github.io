@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
+  <script src="./assets/js/links.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -12,30 +13,85 @@
     <div class="nav-container">
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="" class="text-16 regular t-white">About me</a>
+          <a href="#about" class="text-16 regular t-white links">About me</a>
         </li>
         <li class="nav-item">
-          <a href="" class="text-16 regular t-white">Portfolio</a>
+          <a href="#portfolio" class="text-16 regular t-white links">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a href="" class="text-16 regular t-white">Technology</a>
+          <a href="#technology" class="text-16 regular t-white links">Technology</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="text-16 regular t-white links">Contact</a>
         </li>
       </ul>
     </div>
   </nav>
-  <div class="container">
-    <div class="intro">
-      <div class="intro-l">
-        <object type="image/svg+xml" data="./assets/img/s2.svg" width="100%" height="500"></object>
-      </div>
-      <div class="intro-r">
-        <h1 class="bold t-white">Hi, I'm<br/>P. Erikson Saragi</h1>
-        <h1 class="bold t-primary">Fullstack Developer</h1>
-        <article class="text-32 t-white mt-2">
-          <p>I build website, web app, REST API, and now slowly diving into mobile app with Flutter.</p> 
-        </article>
+  <section id="about">
+    <div class="container">
+      <div class="intro">
+        <div class="intro-l">
+          <object type="image/svg+xml" data="./assets/img/s2.svg"></object>
+        </div>
+        <div class="intro-r">
+          <h1 class="bold t-white">Hi, I'm<br/>P. Erikson Saragi</h1>
+          <h1 class="bold t-primary">Fullstack Developer</h1>
+          <article class="text-32 t-white mt-2">
+            <p>I build website, web app, REST API, and now slowly diving into mobile app with Flutter.</p> 
+          </article>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+  <hr/>
+  <section id="portfolio">
+    <div class="container">
+      <h1 class="t-primary t-center">What I have built</h1>
+      <div class="d-flex col py-3">
+        <h2 class="t-white t-center">Website &#38; Web app</h2>
+        <div class="d-flex col py-4">
+          <div class="d-flex row">
+            <div class="p-1">
+              <a href="https://ruangengineer.id" target="_blank">
+                <img src="./assets/img/re_light.svg" width="300" height="auto">
+              </a>
+            </div>
+            <div class="p-1">
+              <a href="https://bentanihotel.id" target="_blank">
+                <img src="./assets/img/bentani_light.svg" width="200" height="auto">
+              </a>
+            </div>
+            <a href="https://entrepreneurshipmahasiswa.id" target="_blank">
+              <div class="p-1">
+                <img src="./assets/img/emc.svg" width="300" height="auto">
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="d-flex col py-3">
+          <h2 class="t-white t-center">REST API</h2>
+          <div class="d-flex row py-4">
+            <div class="p-1">
+              <a href="https://apidev.taradmc.com/swagger" target="_blank">
+                <img src="./assets/img/taradmc.png" width="300" height="auto">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr/>
+  <section id="technology">
+    <div class="container">
+      <h1 class="t-primary t-center">Technologies I use</h1>
+    </div>
+  </section>
+  <hr/>
+  <section id="contact">
+    <div class="container">
+      <h1 class="t-primary t-center">Contact</h1>
+    </div>
+  </section>
 </body>
 </html>
