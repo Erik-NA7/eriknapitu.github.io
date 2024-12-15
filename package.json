@@ -1,0 +1,25 @@
+{
+  "name": "erik-na7.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --dist-dir public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erik-NA7/erik-na7.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erik-NA7/erik-na7.github.io/issues"
+  },
+  "homepage": "https://github.com/Erik-NA7/erik-na7.github.io#readme",
+  "devDependencies": {
+    "parcel": "^2.13.2",
+    "svgo": "^3.3.2"
+  }
+}

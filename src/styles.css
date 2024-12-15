@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --black-1: #202020;
+  --black-2: #323232;
+  --tosca-accent: #00877e;
+  --grey: #f1f1f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tosca-accent);
+  border-radius: 3px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  color: var(--black-2);
+  background-color: var(--grey);
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+}
+
+/* Typography */
+
+.text-18 {
+  font-size: 18px;
+}
+
+.text-24 {
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+
+h1, h2 {
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--tosca-accent);
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--tosca-accent);
+}
+
+/* Typography end */
+
+/* wrappers */
+section {
+  padding: 1em 1em;
+  z-index: 2;
+}
+
+section:first-of-type {
+  padding-top: 3.5em;
+  background: url('./assets/img/pexels-matej.jpg');
+  background-size: cover;
+  position: relative; 
+}
+
+section:first-of-type .container {
+  background-color: transparent;
+}
+
+section:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/img/pexels-matej.jpg');
+  background: linear-gradient(0deg, rgba(255,255,255,1) 45%, rgba(255, 255, 255, 0.9) 100%);
+  z-index: -1;
+}
+
+section:last-of-type {
+  padding-bottom: 2em;
+}
+
+.container h2 {
+  display: flex;
+  align-items: center;
+}
+
+.container h2 img {
+  margin-right: 0.25em;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  z-index: 100;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+#about td {
+  padding: 0.25em 0.25em 0.25em 0em;
+}
+
+#projects .td-img {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+#projects tr:nth-child(even),
+#courses tr:nth-child(even) {
+  background-color: var(--grey);
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.intro-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+  flex-grow: 1;
+}
+
+.intro-r {
+  display: none;
+  position: relative;
+  width: auto;
+  flex-grow: 1;
+}
+
+.intro-r img {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.f-col {
+  flex-direction: column;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.f-50 {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .f-50 {
+    width: 50%;
+  }
+}
+/* wrappers end*/
+
+/* formatting */
+
+ul, ol {
+  padding-inline-start: 1em;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+li {
+  padding-left: 1em;
+  margin-bottom: 0.5em;
+}
+
+.child-list li::marker {
+  text-indent: 1em !important;
+  margin-left: 1em;
+}
+
+/* formatting end */
+
+
+/* spacing */
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-2 {
+  margin-bottom: 0.5em;
+}
+/* spacing end */
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--tosca-accent);
+  overflow: hidden;
+  z-index: 10;
+  height: 53px;
+}
+
+.open {
+  animation: openMenu .5s linear forwards;
+}
+
+.close {
+  animation: closeMenu .5s linear forwards;
+}
+
+nav button {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  background: none;
+  border: none;
+  rotate: -90deg;
+  transition: all ease-in-out .3s;
+  margin-left: auto;
+}
+
+nav button:hover {
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+  overflow: hidden;
+  width: fit-content;
+  margin: auto;
+  padding: 0;
+  display: none;
+}
+
+nav li {
+  float: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 1em;
+  font-weight: 500;
+  transition: all ease-in-out .4s;
+}
+
+nav li a:hover {
+  background-color: var(--grey);
+  color: var(--tosca-accent);
+}
+
+/* Navbar end*/
+
+.scroll-top {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  background-color: var(--tosca-accent);
+  color: white;
+  border-radius: 0.25em;
+}
+
+table {
+  text-indent: 0;
+  border-spacing: 0;
+  width: 100%;
+}
+
+thead {
+  background-color: var(--tosca-accent);
+  color: white;
+}
+
+tbody {
+  border: 1px solid #00b0a4;
+}
+
+th {
+  font-weight: 500;
+  text-align: start;
+}
+
+th:first-of-type {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+th:last-of-type {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+hr {
+  border: 1px solid var(--tosca-accent);
+  margin-bottom: 1em;
+}
+
+
+@keyframes openMenu {
+  from {
+    height: 53px;
+  }
+  to {
+    height: 55vh;
+  }
+}
+
+@keyframes closeMenu {
+  from {
+    height: 55vh;
+  }
+  to {
+    height: 53px;
+  }
+}
+
+@media (min-width: 900px) {
+  nav {
+    width: 100%;
+    height: 53px;
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  nav li {
+    float: left;
+  }
+
+  nav li a {
+    text-align: center;
+  }
+
+  nav button {
+    display: none;
+  }
+
+  section:first-of-type{
+    margin-top: 3em;
+  }
+
+  .container {
+    padding: 2em;
+  }
+
+  .intro-l {
+    width: 70%;
+  }
+
+  .intro-r {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

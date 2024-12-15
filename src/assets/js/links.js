@@ -5,11 +5,10 @@ window.onload = () => {
   const nav_toggle = document.querySelector('#nav-toggle');
   const nav_menu = document.getElementById('nav-menu');
   const navbarHeight = 54;
-  
+  const sectionElements = document.querySelectorAll('section');
+  console.log('se', sectionElements);
+
   function openMenu() {
-    console.log('navmenu display: ', nav_menu.style.display);
-    console.log(nav.className);
-    console.log(nav.classList);
     if (nav_menu.style.display == '') {
       nav_toggle.style.rotate = '-180deg';
       nav.classList.remove('close');
@@ -89,4 +88,20 @@ window.onload = () => {
       }, 200)
     }
   })
+
+  function onScroll() {
+    sectionElements.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+      
+      // section.classList.toggle('visible', isVisible);
+      // if (isVisible) {
+      //   if (!newVisibleSections.includes(section.id)) {
+      //     newVisibleSections.push(section.id);
+      //   }
+      // } else {
+      //   newVisibleSections = newVisibleSections.filter((id) => id !== section.id);
+      // }
+    });
+  }
 };
